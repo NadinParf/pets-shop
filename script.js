@@ -118,49 +118,49 @@ items.forEach((item)=>{
 
 
 
-function renderItems(itemsToRender, containerElement) {
+// function renderItems(itemsToRender, containerElement) {
   
 
-  containerElement.innerHTML = ''; 
-  itemsToRender.forEach(item => {
-    const newItem = makeItemByTemplate(item.title, item.description, item.img, item.price, item.tags);
-    containerElement.append(newItem);
-  });
-}
+//   containerElement.innerHTML = ''; 
+//   itemsToRender.forEach(item => {
+//     const newItem = makeItemByTemplate(item.title, item.description, item.img, item.price, item.tags);
+//     containerElement.append(newItem);
+//   });
+// }
 
 
 
 
-const inputText = document.querySelector('#search-input').value;
-const nothingFoundElement = document.getElementById('nothing-found');
+// const inputText = document.querySelector('#search-input').value;
+// const nothingFoundElement = document.getElementById('nothing-found');
 
 
-document.getElementById('search-btn').addEventListener('click', function () {
-  document.getElementById('nothing-found').textContent = "";
+// document.getElementById('search-btn').addEventListener('click', function () {
+//   document.getElementById('nothing-found').textContent = "";
   
-  const inputText = document.querySelector('#search-input').value;
+//   const inputText = document.querySelector('#search-input').value;
   
 
-  if (inputText.trim() !== "") {
+//   if (inputText.trim() !== "") {
     
-    const searchResults = [];
+//     const searchResults = [];
 
-    items.forEach((item) => {
+//     items.forEach((item) => {
       
       
-      if (item.title.toLowerCase().includes(inputText.toLowerCase())) {
-        searchResults.push(item);
-      }
+//       if (item.title.toLowerCase().includes(inputText.toLowerCase())) {
+//         searchResults.push(item);
+//       }
 
-    });
+//     });
 
 
-    if (searchResults.length > 0) {
-      renderItems(searchResults, container);
-    } else {
-      document.getElementById('nothing-found').textContent = "Ничего не найдено";
-    }
-  }
+//     if (searchResults.length > 0) {
+//       renderItems(searchResults, container);
+//     } else {
+//       document.getElementById('nothing-found').textContent = "Ничего не найдено";
+//     }
+//   }
   
-});
+// });
 
